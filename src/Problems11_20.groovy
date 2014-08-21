@@ -313,4 +313,17 @@ class Problems11_20 {
         System.out.println(numSundays)
     }
 
+    public static void problem20(){
+        BigInteger fact = 1
+        for(int i=1; i<=100; i++){
+            fact = fact * i
+        }
+        String factorial = String.valueOf(fact)
+        int sum = 0;
+        for(int i=0; i<factorial.length(); i++){
+            sum += Integer.valueOf(factorial.substring(i,i+1))
+        }
+        System.out.println(sum)
+    }
+
 }
