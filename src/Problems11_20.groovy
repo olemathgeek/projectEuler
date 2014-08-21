@@ -263,7 +263,37 @@ class Problems11_20 {
     }
 
     public static void problem18(){
-        
+        def f = new File("src/supportingFiles/18.txt")
+        ArrayList<Integer> previous = new ArrayList<Integer>()
+        f.eachLine() { line ->
+            ArrayList<Integer> current = new ArrayList<Integer>()
+            String[] nums = line.split(" ")
+            for(int i = 0; i< nums.size(); i++){
+                int a = 0
+                int b = 0
+                if(i<previous.size()){
+                    a = previous[i]
+                }
+                if(i-1>-1 && i-1<previous.size()){
+                    b = previous[i-1]
+                }
+                int newVal = Integer.valueOf(nums[i])
+                if(a>b){
+                    newVal += a
+                } else {
+                    newVal += b
+                }
+                current.push(newVal)
+            }
+            previous = current
+        }
+        int max = 0
+        for(Integer i : previous){
+            if(max<i){
+                max = i
+            }
+        }
+        System.out.println(max)
     }
 
 }
