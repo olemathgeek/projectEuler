@@ -1,3 +1,4 @@
 .idea/**
 projectEuler.iml
 out/**
+.DS_Store
