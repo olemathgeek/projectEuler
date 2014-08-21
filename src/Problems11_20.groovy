@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 /**
  * Created by EmilyJones on 8/12/14.
  */
@@ -294,6 +296,21 @@ class Problems11_20 {
             }
         }
         System.out.println(max)
+    }
+
+    public static void problem19(){
+        Date testDate = new Date(1,0,1)
+        int numSundays = 0;
+        SimpleDateFormat sdf = new SimpleDateFormat("d")
+        while(testDate.before(new Date(101,0,1))){
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(testDate);
+            if(testDate.getDay() == 0 && sdf.format(cal.getTime()).equals("1")){
+                numSundays++
+            }
+            testDate = HelperMethods.addDays(testDate,1)
+        }
+        System.out.println(numSundays)
     }
 
 }
