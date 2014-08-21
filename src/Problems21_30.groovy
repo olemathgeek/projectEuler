@@ -27,4 +27,24 @@ class Problems21_30 {
         }
         System.out.println(sum)
     }
+
+    public static void problem22(){
+        def f = new File("src/supportingFiles/22.txt")
+        ArrayList<String> names = new ArrayList<String>()
+        f.eachLine { line ->
+            line = line.substring(1,line.size()-1)
+            names = line.split("\",\"")
+        }
+        names = names.sort()
+
+        BigInteger sum = 0
+        for(int i=0; i<names.size(); i++){
+            sum += HelperMethods.alphabeticValue(names[i])*(i+1)
+            if(names[i].equals("COLIN")){
+                System.out.println(HelperMethods.alphabeticValue(names[i])*(i+1))
+            }
+        }
+        System.out.println(sum)
+    }
+
 }

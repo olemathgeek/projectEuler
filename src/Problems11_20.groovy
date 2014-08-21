@@ -267,7 +267,7 @@ class Problems11_20 {
     public static void problem18(){
         def f = new File("src/supportingFiles/18.txt")
         ArrayList<Integer> previous = new ArrayList<Integer>()
-        f.eachLine() { line ->
+        f.eachLine { line ->
             ArrayList<Integer> current = new ArrayList<Integer>()
             String[] nums = line.split(" ")
             for(int i = 0; i< nums.size(); i++){

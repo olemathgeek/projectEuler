@@ -93,4 +93,11 @@ class HelperMethods {
         return cal.getTime();
     }
 
+    public static int alphabeticValue(String str){
+        int sum = 0;
+        for(int i=0; i<str.length(); i++){
+            sum += (int)str.charAt(i) - 64
+        }
+        return sum
+    }
 }
