@@ -100,4 +100,15 @@ class HelperMethods {
         }
         return sum
     }
+
+    public static boolean isAbundant(int num){
+        ArrayList<Integer> divisors = findDivisors(num,false)
+        Integer sum = 0
+        for(Integer i : divisors){
+            if(num != i){
+                sum += i
+            }
+        }
+        return sum > num
+    }
 }
