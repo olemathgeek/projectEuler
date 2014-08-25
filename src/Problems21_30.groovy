@@ -80,28 +80,15 @@ class Problems21_30 {
 
     public ArrayList<String> perms = new ArrayList<String>()
 
-
     public void problem24(){
         String original = "0123456789"
         permute("",original)
-//        for(String perm : perms){
-//            System.out.print(perm + ", ")
-//        }
-//        System.out.println("\n")
-//        perms.sort()
-//        for(String perm : perms){
-//            System.out.print(perm + ", ")
-//        }
-//        System.out.println("\n")
-        System.out.println("999999 = " + perms.get(999999))
-        System.out.println("1000000 = " + perms.get(1000000))
-        System.out.println("1000001 = " + perms.get(1000001))
+        System.out.println(perms.get(999999))
     }
 
     public void permute(String beginningString, String endingString) {
         if (endingString.length() <= 1) {
             perms.add(beginningString + endingString);
-            System.out.println(beginningString + endingString);
         }
         else {
             for (int i = 0; i < endingString.length(); i++) {
