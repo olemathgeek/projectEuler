@@ -54,7 +54,6 @@ class Problems21_30 {
 //                Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
         ArrayList<Integer> abundants = new ArrayList<Integer>()
         int max = 28124
-//        int max = 30
         for(int i=1; i<max; i++){
             if(HelperMethods.isAbundant(i)){
                 abundants.push(i)
@@ -75,9 +74,6 @@ class Problems21_30 {
                 sum += i
             }
         }
-//        for(Integer abund : abundants){
-//            System.out.print(""+abund+", ")
-//        }
         System.out.println()
         System.out.println(sum)
     }
