@@ -77,4 +77,42 @@ class Problems21_30 {
         System.out.println()
         System.out.println(sum)
     }
+
+    public ArrayList<String> perms = new ArrayList<String>()
+
+
+    public void problem24(){
+        String original = "0123456789"
+        permute("",original)
+//        for(String perm : perms){
+//            System.out.print(perm + ", ")
+//        }
+//        System.out.println("\n")
+//        perms.sort()
+//        for(String perm : perms){
+//            System.out.print(perm + ", ")
+//        }
+//        System.out.println("\n")
+        System.out.println("999999 = " + perms.get(999999))
+        System.out.println("1000000 = " + perms.get(1000000))
+        System.out.println("1000001 = " + perms.get(1000001))
+    }
+
+    public void permute(String beginningString, String endingString) {
+        if (endingString.length() <= 1) {
+            perms.add(beginningString + endingString);
+            System.out.println(beginningString + endingString);
+        }
+        else {
+            for (int i = 0; i < endingString.length(); i++) {
+                try {
+                    String newString = endingString.substring(0, i) + endingString.substring(i + 1);
+
+                    permute(beginningString + endingString.charAt(i), newString);
+                } catch (StringIndexOutOfBoundsException exception) {
+                    exception.printStackTrace();
+                }
+            }
+        }
+    }
 }
