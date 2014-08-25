@@ -102,4 +102,16 @@ class Problems21_30 {
             }
         }
     }
+
+    public static void problem25(){
+        ArrayList<BigInteger> fibs = new ArrayList<BigInteger>()
+        fibs.push(new BigInteger(1))
+        fibs.push(new BigInteger(1))
+        while(fibs.get(fibs.size()-1).toString().length() < 1000){
+            fibs.push(fibs.get(fibs.size()-1).add(fibs.get(fibs.size()-2)))
+        }
+//        System.out.println(fibs.get(fibs.size()-1))
+        System.out.println(fibs.size())
+
+    }
 }
