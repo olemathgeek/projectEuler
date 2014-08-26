@@ -114,4 +114,13 @@ class Problems21_30 {
         System.out.println(fibs.size())
 
     }
+
+    public static void problem26(){
+        //TODO
+        System.out.println("TODO!")
+    }
+
+    public static void problem27(){
+
+    }
 }
