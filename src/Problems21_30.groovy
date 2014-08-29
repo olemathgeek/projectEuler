@@ -130,6 +130,24 @@ class Problems21_30 {
 //        where |n| is the modulus/absolute value of n
 //        e.g. |11| = 11 and |?4| = 4
 //        Find the product of the coefficients, a and b, for the quadratic expression that produces the maximum number of primes for consecutive values of n, starting with n = 0.
-
+        int bestA = 0;
+        int bestB = 0;
+        int highestNumber = 0;
+        for(int a=-1000; a<1000; a++){
+            for(int b=-1000; b<1000; b++){
+                int numPrimes = -1
+                for(int n=0; n>=numPrimes; n++){
+                    if(!HelperMethods.isPrime(n*n + a*n + b)){
+                        numPrimes=n
+                    }
+                }
+                if(numPrimes > highestNumber){
+                    bestA = a
+                    bestB = b
+                    highestNumber = numPrimes
+                }
+            }
+        }
+        System.out.println(bestA * bestB)
     }
 }
