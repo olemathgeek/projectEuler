@@ -120,7 +120,37 @@ class Problems21_30 {
         System.out.println("TODO!")
     }
 
-    public static void problem27(){
+    public static Long numPrimesGivenAandB(Long a, Long b){
+        for(int n = 0; n>=0; n++){
+            if(!isPrimeGivenAandB(a,b,n)){
+                return n
+            }
+        }
+    }
+
+    public static boolean isPrimeGivenAandB(Long a, Long b, Long n){
+        return HelperMethods.isPrime(n*n + a*n + b)
+    }
+
+    public static void problem27b(){
+        Long bestA = 0;
+        Long bestB = 0;
+        Long highestNumber = 0;
+        for(Long a=-1000; a<1000; a++){
+            for(Long b=-1000; b<1000; b++){
+                Long numPrimes = numPrimesGivenAandB(a,b)
+                if(numPrimes > highestNumber){
+                    bestA = a
+                    bestB = b
+                    highestNumber = numPrimes
+                }
+            }
+        }
+        System.out.println(bestA * bestB)
+    }
+
+
+public static void problem27(){
 //        Euler discovered the remarkable quadratic formula:
 //                n² + n + 41
 //        It turns out that the formula will produce 40 primes for the consecutive values n = 0 to 39. However, when n = 40, 402 + 40 + 41 = 40(40 + 1) + 41 is divisible by 41, and certainly when n = 41, 41² + 41 + 41 is clearly divisible by 41.

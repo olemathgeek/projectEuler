@@ -7,4 +7,6 @@
 //Problems21_30 problemSet = new Problems21_30()
 //problemSet.problem24()
 Problems21_30.problem27()
+Problems21_30.problem27b()
+Problems51_60.problem53()
 

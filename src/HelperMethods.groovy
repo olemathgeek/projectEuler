@@ -46,6 +46,45 @@ class HelperMethods {
         return true
     }
 
+//    public static boolean isPrime(Long n){
+//        for(Long i=2; i<Math.sqrt(n); i++){
+//            if(n % i == 0){
+//                return false
+//            }
+//        }
+//        return true
+//    }
+
+    public static boolean isPrime(Long n) {
+        if (n == 1) {
+            return false
+        }
+        if (n < 4) {
+            return true
+        } //2 and 3 are prime
+        if (n % 2 == 0) {
+            return false
+        }
+        if (n < 9) {
+            return true
+        } //we have already excluded 4,6 and 8.
+        if (n % 3 == 0) {
+            return false
+        }
+        Long r = Math.floor(Math.sqrt(n))// sqrt(n) rounded to the greatest integer r so that r*r<=n
+        Long f = 5
+        while (f <= r) {
+            if(n % f == 0) {
+                return false
+            }
+            if(n % (f + 2) == 0) {
+                return false
+            }
+            f = f + 6
+        }
+        return true
+    }
+
     public static boolean isPrime(ArrayList<Integer> pastPrimes, int n){
         for(int pastPrime : pastPrimes){
             if(n % pastPrime == 0){
