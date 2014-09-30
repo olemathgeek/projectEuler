@@ -3,6 +3,31 @@
  */
 
 class Problems21_30 {
+
+    public static void problems21_30(){
+        System.out.print("Problem 21:")
+//        Problems21_30.problem21()
+        System.out.print("Problem 22:")
+//        Problems21_30.problem22()
+        System.out.print("Problem 23:")
+//        Problems21_30.problem23()
+        System.out.print("Problem 24:")
+        Problems21_30 problemSet = new Problems21_30()
+        problemSet.problem24()
+        System.out.print("Problem 25:")
+        Problems21_30.problem25()
+        System.out.print("Problem 26:")
+        Problems21_30.problem26()
+        System.out.print("Problem 27:")
+//        Problems21_30.problem27()
+        System.out.print("Problem 28:")
+//        Problems21_30.problem28()
+        System.out.print("Problem 29:")
+//        Problems21_30.problem29()
+        System.out.print("Problem 30:")
+//        Problems21_30.problem30()
+    }
+
     public static int getProperDivisorSum(int num){
         ArrayList<Long> divisors = HelperMethods.findDivisors(num, false)
         int ret = 0;
